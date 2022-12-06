@@ -1,0 +1,78 @@
+{
+  "name": "test-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/test-lib/src",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@nxrocks/nx-quarkus:dev",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "serve": {
+      "executor": "@nxrocks/nx-quarkus:serve",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "remote-dev": {
+      "executor": "@nxrocks/nx-quarkus:remote-dev",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "test": {
+      "executor": "@nxrocks/nx-quarkus:test",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "clean": {
+      "executor": "@nxrocks/nx-quarkus:clean",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "build": {
+      "executor": "@nxrocks/nx-quarkus:build",
+      "options": {
+        "root": "packages/test-lib"
+      },
+      "dependsOn": [
+        "^install"
+      ],
+      "outputs": [
+        "{workspaceRoot}/packages/test-lib/target"
+      ]
+    },
+    "install": {
+      "executor": "@nxrocks/nx-quarkus:install",
+      "options": {
+        "root": "packages/test-lib"
+      },
+      "outputs": [
+        "{workspaceRoot}/packages/test-lib/target"
+      ]
+    },
+    "package": {
+      "executor": "@nxrocks/nx-quarkus:package",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "add-extension": {
+      "executor": "@nxrocks/nx-quarkus:add-extension",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    },
+    "list-extensions": {
+      "executor": "@nxrocks/nx-quarkus:list-extensions",
+      "options": {
+        "root": "packages/test-lib"
+      }
+    }
+  },
+  "tags": []
+}

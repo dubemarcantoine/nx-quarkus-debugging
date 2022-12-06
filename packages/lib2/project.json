@@ -1,0 +1,78 @@
+{
+  "name": "lib2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lib2/src",
+  "projectType": "library",
+  "targets": {
+    "dev": {
+      "executor": "@nxrocks/nx-quarkus:dev",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "serve": {
+      "executor": "@nxrocks/nx-quarkus:serve",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "remote-dev": {
+      "executor": "@nxrocks/nx-quarkus:remote-dev",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "test": {
+      "executor": "@nxrocks/nx-quarkus:test",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "clean": {
+      "executor": "@nxrocks/nx-quarkus:clean",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "build": {
+      "executor": "@nxrocks/nx-quarkus:build",
+      "options": {
+        "root": "packages/lib2"
+      },
+      "dependsOn": [
+        "^install"
+      ],
+      "outputs": [
+        "{workspaceRoot}/packages/lib2/target"
+      ]
+    },
+    "install": {
+      "executor": "@nxrocks/nx-quarkus:install",
+      "options": {
+        "root": "packages/lib2"
+      },
+      "outputs": [
+        "{workspaceRoot}/packages/lib2/target"
+      ]
+    },
+    "package": {
+      "executor": "@nxrocks/nx-quarkus:package",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "add-extension": {
+      "executor": "@nxrocks/nx-quarkus:add-extension",
+      "options": {
+        "root": "packages/lib2"
+      }
+    },
+    "list-extensions": {
+      "executor": "@nxrocks/nx-quarkus:list-extensions",
+      "options": {
+        "root": "packages/lib2"
+      }
+    }
+  },
+  "tags": []
+}
